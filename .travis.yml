@@ -1,5 +1,19 @@
-deploy:
-    provider: firebase
-    token:
-      secure: "1//0g_3Lni_kWIZbCgYIARAAGBASNwF-L9IrMXR65V6zplfhgIW0QEwb0zQ4Q7S52BNYc9C9nX0Ml0oo-t--qkUHHb0z33eM0o5fXKY"
-    message: "Travis - Angular deployment"    
+language: node_js
+
+node_js:
+  - node
+
+before_script:
+  - npm install -g --silent firebase-tools
+  - npm install -g --silent @angular/cli
+
+script:
+  - ng build --prod
+
+after_success:
+  - test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" && firebase deploy --token $FIREBASE_TOKEN --non-interactive
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
