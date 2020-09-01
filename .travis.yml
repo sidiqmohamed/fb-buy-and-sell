@@ -1,8 +1,6 @@
 language: node_js
 node_js:
-    - "13"
-    - "12"
-    - "11"
+    - "13"    
 branches:
   only:
     - master
@@ -15,4 +13,4 @@ deploy:
   skip_cleanup: true
   provider: firebase
   token:
-    secure: "1:344743767504:web:5627664f697ea019ed9dd5"
+    secure: "1//0g_3Lni_kWIZbCgYIARAAGBASNwF-L9IrMXR65V6zplfhgIW0QEwb0zQ4Q7S52BNYc9C9nX0Ml0oo-t--qkUHHb0z33eM0o5fXKY"
