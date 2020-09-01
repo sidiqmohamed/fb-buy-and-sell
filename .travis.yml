@@ -1,16 +1,5 @@
-language: node_js
-node_js:
-    - "13"    
-branches:
-  only:
-    - master
-before_script:
-  - npm install -g @angular/cli
-script:
-  - npm install
-  - npm run build
 deploy:
-  skip_cleanup: true
-  provider: firebase
-  token:
-    secure: "1//0g_3Lni_kWIZbCgYIARAAGBASNwF-L9IrMXR65V6zplfhgIW0QEwb0zQ4Q7S52BNYc9C9nX0Ml0oo-t--qkUHHb0z33eM0o5fXKY"
+    provider: firebase
+    token:
+      secure: "1//0g_3Lni_kWIZbCgYIARAAGBASNwF-L9IrMXR65V6zplfhgIW0QEwb0zQ4Q7S52BNYc9C9nX0Ml0oo-t--qkUHHb0z33eM0o5fXKY"
+    message: "Travis - Angular deployment"    
