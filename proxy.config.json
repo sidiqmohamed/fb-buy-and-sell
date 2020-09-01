@@ -1,6 +1,6 @@
 {
     "/api/*": {
-        "target": "http://0.0.0.0:8080",
+        "target": "https://us-central1-fb-buy-and-sell.cloudfunctions.net/helloWorld",
         "secure": false,
         "logLevel": "debug",
         "changeOrigin": true

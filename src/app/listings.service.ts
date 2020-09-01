@@ -28,7 +28,7 @@ export class ListingsService {
   ) { }
 
   getListings(): Observable<Listing[]> {
-    return this.http.get<Listing[]>('/api/listings');
+    return this.http.get<Listing[]>('https://us-central1-fb-buy-and-sell.cloudfunctions.net/helloWorld');
   }
 
   getListingById(id: string): Observable<Listing> {
